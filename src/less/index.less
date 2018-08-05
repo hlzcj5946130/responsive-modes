@@ -1,0 +1,96 @@
+//引入header
+@import url("header.less");
+
+//三大特色
+#feature{
+    padding: 0;
+    margin: 0;
+    .row{
+            
+        div{
+            background: url("@{bgPath}feature01.png") no-repeat left center;
+            min-height: 65px;
+            padding-left: 80px;
+    
+            h4{
+              font-weight: bold;  
+            }
+        }
+        
+        div:nth-of-type(2){
+           background-image: url("@{bgPath}feature02.png"); 
+        }
+        
+        div:nth-of-type(3){
+           background-image: url("@{bgPath}feature03.png"); 
+        }
+    }
+}
+
+
+//投资列表
+#invest,#article{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+//屏幕宽度在620以下时就隐藏超宽的列
+@media all and (max-width: 620px){
+    .hide620{
+        display: none;
+    }
+}
+
+//公共的panel
+.panel{
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+.panel-default{
+    border: none;
+    
+    &>.panel-heading{
+        background-color: transparent;
+        padding: 0px;
+        
+        display: flex;
+        justify-content: space-between;
+        
+        h1{
+            font-size: 24px;
+            margin-bottom: 0px;
+            padding-bottom: 10px;
+            color: @colorBlue;
+            font-weight: bold;
+            border-bottom: 3px solid @colorBlue;
+        }
+        
+        p{
+            margin: 0px;
+            padding: 0px;
+            line-height: 60px;
+        }
+    }
+    
+    .panel-body{
+        
+        ul{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            
+            li{
+                line-height: 26px;
+                border-bottom: dotted 1px #ccc;
+                
+                span{
+                    float: right;
+                    color: #999;
+                }
+            }
+        }
+    }
+}
+
+//引入页脚
+@import url("footer.less");
